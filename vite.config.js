@@ -10,7 +10,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "src/index.html"),
         food: resolve(__dirname, "src/food-list.html"),
-        checkout: resolve(__dirname, "src/calculator.html"),
+        checkout: resolve(__dirname, "src/catagories.html"),
       },
     },
   },
