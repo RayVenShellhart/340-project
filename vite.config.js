@@ -13,5 +13,6 @@ export default defineConfig({
         checkout: resolve(__dirname, "src/catagories.html"),
       },
     },
+    
   },
 });
