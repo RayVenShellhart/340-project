@@ -13,6 +13,7 @@ export default defineConfig({
         food: resolve(__dirname, "src/food-list.html"),
         Catagories: resolve(__dirname, "src/catagories.html"),
         eat: resolve(__dirname, "src/food-page.html"),
+        quote: resolve(__dirname, "https://aesthetic-melomakarona-d550dd.netlify.app/api/qotd")
       },
     },
     
