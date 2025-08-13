@@ -82,7 +82,7 @@ section a {
   100% {background-color: var(--secondary);}
 }
 
-.reccomend section {
+.reccomend section:not(.qoute) {
     animation: colorChange 10s infinite;
       width: 110%;
 }
