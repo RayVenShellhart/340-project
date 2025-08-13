@@ -112,3 +112,7 @@ p {
 #qoute {
   animation: fadeIn 5s;
 }
+
+img:hover {
+  filter: grayscale(100%)
+}
