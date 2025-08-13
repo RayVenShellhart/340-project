@@ -376,20 +376,6 @@ export class qoute {
         section.appendChild(author)
         section.id = 'qoutes'
         element.appendChild(section)
-
-        // this.data = JSON.stringify(this.data)
-        // this.data = JSON.parse(this.data)
-        // if (Array.isArray(this.data.quote)) {
-        //     this.data.quote.forEach(item => {
-        //         console.log(item.body)
-        //         const body = document.createElement("h2")
-        //         body.innerHTML = item.body
-        //         section.appendChild(body)
-        //     })
-        //     element.appendChild(section)
-        // } else {
-        //     console.error('not array')
-        // }
     }
 
     async init() {

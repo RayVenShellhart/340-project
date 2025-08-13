@@ -12,8 +12,7 @@ export default defineConfig({
         main: resolve(__dirname, "src/index.html"),
         food: resolve(__dirname, "src/food-list.html"),
         Catagories: resolve(__dirname, "src/catagories.html"),
-        eat: resolve(__dirname, "src/food-page.html"),
-        quote: resolve(__dirname, "/api/qotd")
+        eat: resolve(__dirname, "src/food-page.html")
       },
     },
     
