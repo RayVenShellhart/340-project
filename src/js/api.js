@@ -351,9 +351,7 @@ export class qoute {
 
     async fetchData() {
         try {
-            const response = await fetch('/api/qotd', {
-                headers: { 'Accept': 'application/vnd.favqs.v2+json' }
-            })
+            const response = await fetch('/.netlify/functions/qotd')
             if (!response.ok) {
                 throw new Error(`No good! status: ${response.status}`)
             }
