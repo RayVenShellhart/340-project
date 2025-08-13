@@ -351,7 +351,7 @@ export class qoute {
 
     async fetchData() {
         try {
-            const response = await fetch('./netlify/functions/qotd')
+            const response = await fetch('/.netlify/functions/qotd')
             if (!response.ok) {
                 throw new Error(`No good! status: ${response.status}`)
             }
