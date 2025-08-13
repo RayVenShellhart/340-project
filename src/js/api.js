@@ -1,5 +1,9 @@
+/************************* 
+ * Mealdb
+***************************/
 
 
+// catagories
 export class Catagories {
     constructor() {
         this.api = "https://www.themealdb.com/api/json/v1/1/categories.php"
@@ -63,6 +67,8 @@ export class Catagories {
     }
 }
 
+
+// List
 export class foodList {
     constructor(type) {
         this.api = `https://themealdb.com/api/json/v1/1/filter.php?c=${type}`
@@ -126,7 +132,7 @@ export class foodList {
     }
 }
 
-// https://www.themealdb.com/api/json/v1/1/lookup.php?i=
+// page
 
 export class foodItem {
     constructor(type) {
@@ -272,7 +278,7 @@ export class foodItem {
 }
 
 
-// https://www.themealdb.com/api/json/v1/1/random.php
+// random
 export class reccomended {
     constructor() {
         this.api = `https://www.themealdb.com/api/json/v1/1/random.php`
@@ -335,3 +341,61 @@ export class reccomended {
         }
     }
 }
+
+// qoute
+
+export class qoute {
+    constructor() {
+        this.targetElement = 'qoute'
+    }
+
+    async fetchData() {
+        try {
+            const response = await fetch('/api/qotd', {
+                headers: { 'Accept': 'application/vnd.favqs.v2+json' }
+            })
+            if (!response.ok) {
+                throw new Error(`No good! status: ${response.status}`)
+            }
+            this.data = await response.json()
+            console.log("Data fetched", this.data)
+        } catch (error) {
+            console.error("error fetching data:")
+        }
+    }
+    
+    displayQoute() {
+        const element = document.getElementById(this.targetElement)
+
+        const section = document.createElement('section')
+        const body = document.createElement('h2')
+        const author = document.createElement('h2')
+        body.innerHTML = this.data.quote.body
+        author.innerHTML = this.data.quote.author
+        section.appendChild(body)
+        section.appendChild(author)
+        section.id = 'qoutes'
+        element.appendChild(section)
+
+        // this.data = JSON.stringify(this.data)
+        // this.data = JSON.parse(this.data)
+        // if (Array.isArray(this.data.quote)) {
+        //     this.data.quote.forEach(item => {
+        //         console.log(item.body)
+        //         const body = document.createElement("h2")
+        //         body.innerHTML = item.body
+        //         section.appendChild(body)
+        //     })
+        //     element.appendChild(section)
+        // } else {
+        //     console.error('not array')
+        // }
+    }
+
+    async init() {
+        await this.fetchData()
+        this.displayQoute()
+
+    }
+}
+
