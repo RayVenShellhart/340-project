@@ -110,5 +110,5 @@ p {
   }
 
 .qoute {
-  animation: fadeIn;
+  animation: fadeIn 5s;
 }
