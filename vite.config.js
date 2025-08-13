@@ -1,5 +1,6 @@
 import { resolve } from "path";
 import { defineConfig } from "vite";
+import { Catagories } from "./src/js/api";
 
 export default defineConfig({
   root: "src/",
@@ -10,7 +11,8 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "src/index.html"),
         food: resolve(__dirname, "src/food-list.html"),
-        checkout: resolve(__dirname, "src/catagories.html"),
+        Catagories: resolve(__dirname, "src/catagories.html"),
+        eat: resolve(__dirname, "src/food-page.html")
       },
     },
     
