@@ -1,10 +1,13 @@
-import GetQoutes from "./qoute";
+import { reccomended } from "./api";
 
-function loadQuote() {
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString)
 
-    const dataSource = GetQoutes()
-    const element = document.getElementById("qoute")
-    element.appendChild(dataSource)
-}
+const myKeyValue = urlParams.get('id')
 
-loadQuote()
+console.log(myKeyValue)
+
+document.addEventListener('DOMContentLoaded', () => {
+    const page = new reccomended(`${myKeyValue}`)
+    page.init()
+})

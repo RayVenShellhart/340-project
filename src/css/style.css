@@ -38,3 +38,10 @@ a {
 footer {
   background-color: var(--primary);
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}

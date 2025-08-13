@@ -1,13 +1,13 @@
-import { foodList } from "./api"
-
+import { foodItem } from "./api";
+ 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString)
 
-const myKeyValue = urlParams.get('category')
+const myKeyValue = urlParams.get('id')
 
 console.log(myKeyValue)
 
 document.addEventListener('DOMContentLoaded', () => {
-    const list = new foodList(`${myKeyValue}`)
-    list.init()
+    const page = new foodItem(`${myKeyValue}`)
+    page.init()
 })
