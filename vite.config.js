@@ -12,19 +12,17 @@ export default defineConfig({
         main: resolve(__dirname, "src/index.html"),
         food: resolve(__dirname, "src/food-list.html"),
         Catagories: resolve(__dirname, "src/catagories.html"),
-        eat: resolve(__dirname, "src/food-page.html")
+        eat: resolve(__dirname, "src/food-page.html"),
       },
     },
-    
   },
   server: {
     proxy: {
-      '/api': {
-        target: 'https://favqs.com',
+      "/api": {
+        target: "https://favqs.com",
         changeOrigin: true,
-        rewrite: (path) => path.replace('/^\/api', '/api')
-      }
-    }
-  }
-
+        rewrite: (path) => path.replace("/^/api", "/api"),
+      },
+    },
+  },
 });

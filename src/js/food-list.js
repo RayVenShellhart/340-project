@@ -1,13 +1,13 @@
-import { foodList } from "./api"
+import { foodList } from "./api";
 
 const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString)
+const urlParams = new URLSearchParams(queryString);
 
-const myKeyValue = urlParams.get('category')
+const myKeyValue = urlParams.get("category");
 
-console.log(myKeyValue)
+console.log(myKeyValue);
 
-document.addEventListener('DOMContentLoaded', () => {
-    const list = new foodList(`${myKeyValue}`)
-    list.init()
-})
+document.addEventListener("DOMContentLoaded", () => {
+  const list = new foodList(`${myKeyValue}`);
+  list.init();
+});

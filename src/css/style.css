@@ -6,9 +6,20 @@
   --secondary: #00a1e4;
 }
 
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
 header {
   background-color: var(--primary);
-
 }
 
 .logo {
@@ -44,4 +55,60 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+
+section {
+  background-color: var(--secondary);
+  margin-bottom: 25px;
+  animation: slideIn 2s ease-out forwards;
+}
+
+@keyframes slideIn {
+  0% {transform: translateX(-10000%);}
+  50% {transform: translateX(-100%);}
+  100% {transform: translateX(0);}
+}
+
+
+
+section a {
+  border-bottom: 5px solid black;
+}
+
+@keyframes colorChange {
+  0% {background-color: var(--secondary);}
+  50% {background-color: var(--primary);}
+  100% {background-color: var(--secondary);}
+}
+
+.reccomend section {
+    animation: colorChange 10s infinite;
+      width: 110%;
+}
+
+.reccomend  section a{
+  border-bottom: none;
+}
+
+h1,h2,h3 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+p {
+    font-family: "Oswald", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+
+
+  @keyframes fadeIn {
+    0% {opacity: 0;}
+    100%{opacity: 1;}
+  }
+
+.qoute {
+  animation: fadeIn;
 }
