@@ -58,7 +58,7 @@ main {
 }
 
 
-section {
+section:not(#qoute section) {
   background-color: var(--secondary);
   margin-bottom: 25px;
   animation: slideIn 2s ease-out forwards;
